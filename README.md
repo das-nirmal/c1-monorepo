@@ -39,7 +39,36 @@ pnpm --filter onboarding run dev
     │─── onboarding     Onboarding app
     │─── dashboard      Dashboard app
 └───layers              Folder for Nuxt layers (to be extended in Nuxt apps)
-    │─── base           Base layer
+    │─── base           Base app
 └───packages            Folder for packages / libraries
     │─── ...
 ```
+
+## Steps to create a new App
+- Navigate to folder `apps`
+  ```bash
+  cd apps
+  ```
+- Run following command to create a NUXT 3 app (replace `my-app` with the desired name)
+  ```bash
+  pnpx nuxi@latest init my-app
+  ```
+- Navigate into `my-app`
+  ```bash
+  cd my-app
+  ```
+- Update name value to `my-app` in package.json
+  ```json
+  {
+    "name": "my-appapp
+    ...
+  ```
+- Edit `nuxt.config.ts` to extend `base` app
+  ```ts
+  export default defineNuxtConfig({
+    extends: [
+      '../../layers/base'
+    ],
+    ...
+  ```
+## Guidelines to decide what goes into the Base layer
