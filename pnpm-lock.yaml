@@ -18,6 +18,10 @@ importers:
         version: 3.7.0
 
   apps/onboarding:
+    dependencies:
+      lib-test:
+        specifier: workspace:*
+        version: link:../../packages/lib-test
     devDependencies:
       '@nuxt/devtools':
         specifier: latest
@@ -37,6 +41,8 @@ importers:
       nuxt:
         specifier: ^3.7.0
         version: 3.7.0
+
+  packages/lib-test: {}
 
 packages:
 
