@@ -11,9 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "base": "workspace:*"
-  },
   "engines": {
     "node": ">=16.15.1",
     "pnpm": ">=8"
