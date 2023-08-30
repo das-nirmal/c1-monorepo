@@ -74,7 +74,7 @@ pnpm preview
 - Update name value to `my-app` in package.json
   ```json
   {
-    "name": "my-appapp
+    "name": "my-app",
     ...
   ```
 - Edit `nuxt.config.ts` to extend `base` app
