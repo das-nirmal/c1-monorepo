@@ -1,4 +1,4 @@
-# CambridgeOne Micro-App (Frontend) Monorepo
+# C1 Monorepo
 
 ## Overview
 This repository uses pnpm workspace to manage mutli-package monorepo
