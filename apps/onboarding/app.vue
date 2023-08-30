@@ -9,6 +9,6 @@
 </template>
 
 <script setup>
-  import { getMessage } from 'lib-test';
+  import { getMessage } from 'test-package';
   const msg = ref (getMessage());
 </script>
