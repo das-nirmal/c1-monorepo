@@ -39,5 +39,5 @@ pnpm --filter onboarding run dev
     │─── onboarding     Onboarding app
     │─── dashboard      Dashboard app
 └───layers
-    │─── base-app       Base layer app
+    │─── base           Base layer
 ```
