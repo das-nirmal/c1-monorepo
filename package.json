@@ -1,0 +1,21 @@
+{
+  "name": "c1-micro-app-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm --stream -r run build",
+    "dev": "pnpm --stream -r run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base": "workspace:*"
+  },
+  "engines": {
+    "node": ">=16.15.1",
+    "pnpm": ">=8"
+  }
+}
