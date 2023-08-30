@@ -72,3 +72,15 @@ pnpm --filter onboarding run dev
     ...
   ```
 ## Guidelines to decide what goes into the Base layer
+Before adding any new changes in an App, consider whether the changes should reside in the `base` app.
+
+General guidelines:
+- Following repository content should be considered 
+  - module-app-micro-base
+  - libs-frontend-micro-base
+- Build related configurations
+- Common app `runtimeConfig` configurations like environment variables
+- Commong components like C1 header, footer
+- Resuable UI elements like buttons, dropdowns etc.
+- C1 Global themes
+- Common assets
