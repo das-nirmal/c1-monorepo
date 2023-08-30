@@ -74,8 +74,7 @@ pnpm preview
 - Update name value to `my-app` in package.json
   ```json
   {
-    "name": "my-app",
-    ...
+    "name": "my-app",    
   ```
 - Edit `nuxt.config.ts` to extend `base` app
   ```ts
@@ -83,7 +82,6 @@ pnpm preview
     extends: [
       '../../layers/base'
     ],
-    ...
   ```
 - Edit `nuxt.config.ts` to configure an unused port number for dev server
   ```ts
@@ -97,7 +95,7 @@ pnpm preview
   {
     "scripts": {
       "preview": "set PORT=3001 && nuxt preview"
-      ...
+      
   ```
 ## Guidelines to decide what goes into the Base layer
 Before adding any new changes in an App, consider whether the changes should reside in the `base` app.
