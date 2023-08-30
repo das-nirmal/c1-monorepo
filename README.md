@@ -35,9 +35,11 @@ pnpm --filter onboarding run dev
 └───pnpm-workspace.yaml Pnpm workspace configuration
 └───READ.md             Root project Readme file
 └───.gitignore          Git Ignore file
-└───apps
+└───apps                Folder for Nuxt 3 apps
     │─── onboarding     Onboarding app
     │─── dashboard      Dashboard app
-└───layers
+└───layers              Folder for Nuxt layers (to be extended in Nuxt apps)
     │─── base           Base layer
+└───packages            Folder for packages / libraries
+    │─── ...
 ```
