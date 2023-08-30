@@ -25,7 +25,7 @@ Run specific application in development mode (with live reload enabled in the ba
 ```bash
 pnpm --filter onboarding run dev
 ```
-*Note: 'name' must be configured in corresponding package.json (for e.g. 'onboarding in this case')*
+*Note: 'name' must be configured in corresponding package.json (for e.g. 'onboarding' in this case)*
 
 ## Project layout
 
