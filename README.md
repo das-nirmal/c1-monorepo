@@ -23,8 +23,8 @@ Run an app (say `onboarding`) in development mode:
 pnpm --filter onboarding dev
 ```
 
-## Install a NPM package
-Install a NPM package for an app:
+## Install a NPM package within an app
+Install a NPM package within an app:
 ```bash
 # run from root folder
 pnpm --filter onboarding install <npm-package>
