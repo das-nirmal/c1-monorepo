@@ -20,6 +20,12 @@ Run the fullstack application in development mode (with live reload enabled in t
 ```bash
 pnpm dev
 ```
+Run specific application in development mode (with live reload enabled in the backend):
+
+```bash
+pnpm --filter onboarding run dev
+```
+*Note: 'name' must be configured in corresponding package.json (for e.g. 'onboarding in this case')*
 
 ## Project layout
 
