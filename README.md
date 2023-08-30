@@ -11,34 +11,38 @@ npm install -g pnpm
 ```
 Install dependencies
 ```bash
+# run from root folder
 pnpm install
 ```
 ## Development Server
 
-Run the fullstack application in development mode (with live reload enabled in the backend):
-
-```bash
-pnpm dev
-```
-Run a particular application in development mode:
+Run an app (say `onboarding`) in development mode:
 
 ```bash
 # run from root folder
-pnpm --filter onboarding run dev
-
-# or navigate to app folder (apps/onboarding) and run
-pnpm dev
+pnpm --filter onboarding dev
 ```
 
+## Install a NPM package
+Install a NPM package for an app:
+```bash
+# run from root folder
+pnpm --filter onboarding install <npm-package>
+
+# for dev-dependency
+pnpm --filter onboarding install -D <npm-package>
+```
 
 ## Production Server
-Build the application for production:
+Build an app (say `onboarding`) for production:
 ```bash
-pnpm build
+# run from root folder
+pnpm --filter onboarding build
 ```
 Locally preview production build:
 ```bash
-pnpm preview
+# run from root folder
+pnpm --filter onboarding preview
 ```
 
 ## Project layout
@@ -59,19 +63,12 @@ pnpm preview
 ```
 
 ## Steps to create a new App
-- Navigate to folder `apps`
-  ```bash
-  cd apps
-  ```
 - Run following command to create a NUXT 3 app (replace `my-app` with the desired name)
   ```bash
-  pnpx nuxi@latest init my-app
+  pnpx nuxi@latest init apps/my-app
   ```
-- Navigate into `my-app`
-  ```bash
-  cd my-app
-  ```
-- Update name value to `my-app` in package.json
+- Navigate to `apps/my-app`
+- Edit `package.json` to update package name to `my-app`
   ```json
   {
     "name": "my-app",    
