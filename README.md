@@ -1,7 +1,7 @@
 # C1 Monorepo
 
 ## Overview
-This repository uses pnpm workspace to manage mutli-package monorepo
+This repository uses pnpm workspace to manage a mutli-package monorepo
 
 
 ## Setup
@@ -13,19 +13,33 @@ Install dependencies
 ```bash
 pnpm install
 ```
-## Run in development
+## Development Server
 
 Run the fullstack application in development mode (with live reload enabled in the backend):
 
 ```bash
 pnpm dev
 ```
-Run specific application in development mode (with live reload enabled in the backend):
+Run a particular application in development mode:
 
 ```bash
+# run from root folder
 pnpm --filter onboarding run dev
+
+# or navigate to app folder (apps/onboarding) and run
+pnpm dev
 ```
-*Note: 'name' must be configured in corresponding package.json (for e.g. 'onboarding' in this case)*
+
+
+## Production Server
+Build the application for production:
+```bash
+pnpm build
+```
+Locally preview production build:
+```bash
+pnpm preview
+```
 
 ## Project layout
 
@@ -71,16 +85,30 @@ pnpm --filter onboarding run dev
     ],
     ...
   ```
+- Edit `nuxt.config.ts` to configure an unused port number for dev server
+  ```ts
+  export default defineNuxtConfig({ 
+    devServer: {
+      port: 3001
+    }
+  ```
+- Edit `package.json` to configure the same port number for preview
+  ```json
+  {
+    "scripts": {
+      "preview": "set PORT=3001 && nuxt preview"
+      ...
+  ```
 ## Guidelines to decide what goes into the Base layer
 Before adding any new changes in an App, consider whether the changes should reside in the `base` app.
 
 General guidelines:
-- Following repository content should be considered 
+- Following repository content should be considered for `base` app
   - module-app-micro-base
   - libs-frontend-micro-base
-- Build related configurations
-- Common app `runtimeConfig` configurations like environment variables
+- Build system configurations
 - Commong components like C1 header, footer
 - Resuable UI elements like buttons, dropdowns etc.
 - C1 Global themes
 - Common assets
+- Common app `runtimeConfig` configurations like environment variables

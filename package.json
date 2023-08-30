@@ -6,7 +6,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "pnpm --stream -r run build",
-    "dev": "pnpm --stream -r run dev"
+    "dev": "pnpm --stream -r run dev",
+    "preview": "pnpm --stream -r run preview"
   },
   "keywords": [],
   "author": "",
