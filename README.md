@@ -102,8 +102,8 @@ General guidelines:
   - module-app-micro-base
   - libs-frontend-micro-base
 - Build system configurations
-- Commong components like C1 header, footer
-- Resuable UI elements like buttons, dropdowns etc.
+- Common components like C1 header, footer
+- Reusable UI elements like buttons, dropdowns etc.
 - C1 Global themes
 - Common assets
 - Common app `runtimeConfig` configurations like environment variables
