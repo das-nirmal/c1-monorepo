@@ -5,5 +5,6 @@
 <style>
 .hello-msg {
   font-family: "Mulish", "sans-serif";
+  color: red;
 }
 </style>

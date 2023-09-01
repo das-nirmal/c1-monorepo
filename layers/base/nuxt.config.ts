@@ -14,6 +14,7 @@ export default defineNuxtConfig({
           ital: [300, 600]
         }
       }
-    }]
-  ]
+    }],
+    "nuxt-purgecss",
+  ],
 });
