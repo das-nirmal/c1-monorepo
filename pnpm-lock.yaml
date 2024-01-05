@@ -38,6 +38,9 @@ importers:
       '@nuxtjs/google-fonts':
         specifier: ^3.0.2
         version: 3.0.2
+      c12:
+        specifier: ^1.6.1
+        version: 1.6.1
       nuxt:
         specifier: ^3.7.0
         version: 3.7.0
@@ -1081,7 +1084,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.10.0}
     dependencies:
       '@nuxt/schema': 3.7.0
-      c12: 1.4.2
+      c12: 1.6.1
       consola: 3.2.3
       defu: 6.1.2
       globby: 13.2.2
@@ -2227,22 +2230,20 @@ packages:
       streamsearch: 1.1.0
     dev: true
 
-  /c12@1.4.2:
-    resolution: {integrity: sha512-3IP/MuamSVRVw8W8+CHWAz9gKN4gd+voF2zm/Ln6D25C2RhytEZ1ABbC8MjKr4BR9rhoV1JQ7jJA158LDiTkLg==}
+  /c12@1.6.1:
+    resolution: {integrity: sha512-fAZOi3INDvIbmjuwAVVggusyRTxwNdTAnwLay8IsXwhFzDwPPGzFxzrx6L55CPFGPulUSZI0eyFUvRDXveoE3g==}
     dependencies:
       chokidar: 3.5.3
-      defu: 6.1.2
+      defu: 6.1.3
       dotenv: 16.3.1
-      giget: 1.1.2
-      jiti: 1.19.3
-      mlly: 1.4.1
+      giget: 1.2.1
+      jiti: 1.21.0
+      mlly: 1.4.2
       ohash: 1.1.3
       pathe: 1.1.1
       perfect-debounce: 1.0.0
       pkg-types: 1.0.3
       rc9: 2.1.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /cac@6.7.14:
@@ -2369,6 +2370,12 @@ packages:
       consola: 3.2.3
     dev: true
 
+  /citty@0.1.5:
+    resolution: {integrity: sha512-AS7n5NSc0OQVMV9v6wt3ByujNIrne0/cTjiC2MYqhvao57VNfiuVksTSr2p17nVOhEr2KtqiAkGwHcgMC/qUuQ==}
+    dependencies:
+      consola: 3.2.3
+    dev: true
+
   /clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -2434,10 +2441,6 @@ packages:
 
   /colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: true
-
-  /colorette@2.0.20:
-    resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: true
 
   /combined-stream@1.0.8:
@@ -2770,6 +2773,10 @@ packages:
 
   /defu@6.1.2:
     resolution: {integrity: sha512-+uO4+qr7msjNNWKYPHqN/3+Dx3NFkmIzayk2L1MyZQlvgZb/J1A0fo410dpKrN2SnqFjt8n4JL8fDJE0wIgjFQ==}
+    dev: true
+
+  /defu@6.1.3:
+    resolution: {integrity: sha512-Vy2wmG3NTkmHNg/kzpuvHhkqeIx3ODWqasgCRbKtbXEN0G+HpEEv9BtJLp7ZG1CZloFaC41Ah3ZFbq7aqCqMeQ==}
     dev: true
 
   /delayed-stream@1.0.0:
@@ -3365,19 +3372,18 @@ packages:
       resolve-pkg-maps: 1.0.0
     dev: true
 
-  /giget@1.1.2:
-    resolution: {integrity: sha512-HsLoS07HiQ5oqvObOI+Qb2tyZH4Gj5nYGfF9qQcZNrPw+uEFhdXtgJr01aO2pWadGHucajYDLxxbtQkm97ON2A==}
+  /giget@1.2.1:
+    resolution: {integrity: sha512-4VG22mopWtIeHwogGSy1FViXVo0YT+m6BrqZfz0JJFwbSsePsCdOzdLIIli5BtMp7Xe8f/o2OmBpQX2NBOC24g==}
     hasBin: true
     dependencies:
-      colorette: 2.0.20
-      defu: 6.1.2
-      https-proxy-agent: 5.0.1
-      mri: 1.2.0
-      node-fetch-native: 1.4.0
+      citty: 0.1.5
+      consola: 3.2.3
+      defu: 6.1.3
+      node-fetch-native: 1.6.1
+      nypm: 0.3.4
+      ohash: 1.1.3
       pathe: 1.1.1
-      tar: 6.1.15
-    transitivePeerDependencies:
-      - supports-color
+      tar: 6.2.0
     dev: true
 
   /git-config-path@2.0.0:
@@ -3913,6 +3919,11 @@ packages:
     hasBin: true
     dev: true
 
+  /jiti@1.21.0:
+    resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
+    hasBin: true
+    dev: true
+
   /joi@17.10.0:
     resolution: {integrity: sha512-hrazgRSlhzacZ69LdcKfhi3Vu13z2yFfoAzmEov3yFIJlatTdVGUW6vle1zjH8qkzdCn/qGw8rapjqsObbYXAg==}
     dependencies:
@@ -4371,6 +4382,15 @@ packages:
       ufo: 1.3.0
     dev: true
 
+  /mlly@1.4.2:
+    resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
+    dependencies:
+      acorn: 8.10.0
+      pathe: 1.1.1
+      pkg-types: 1.0.3
+      ufo: 1.3.0
+    dev: true
+
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -4433,7 +4453,7 @@ packages:
       '@types/http-proxy': 1.17.11
       '@vercel/nft': 0.23.1
       archiver: 6.0.0
-      c12: 1.4.2
+      c12: 1.6.1
       chalk: 5.3.0
       chokidar: 3.5.3
       citty: 0.1.3
@@ -4509,6 +4529,10 @@ packages:
 
   /node-fetch-native@1.4.0:
     resolution: {integrity: sha512-F5kfEj95kX8tkDhUCYdV8dg3/8Olx/94zB8+ZNthFs6Bz31UpUi8Xh40TN3thLwXgrwXry1pEg9lJ++tLWTcqA==}
+    dev: true
+
+  /node-fetch-native@1.6.1:
+    resolution: {integrity: sha512-bW9T/uJDPAJB2YNYEpWzE54U5O3MQidXsOyTfnbKYtTtFexRvGzb1waphBN4ZwP6EcIvYYEOwW0b72BpAqydTw==}
     dev: true
 
   /node-fetch@2.7.0:
@@ -4732,7 +4756,7 @@ packages:
       '@unhead/vue': 1.3.9(vue@3.3.4)
       '@vue/shared': 3.3.4
       acorn: 8.10.0
-      c12: 1.4.2
+      c12: 1.6.1
       chokidar: 3.5.3
       cookie-es: 1.0.0
       defu: 6.1.2
@@ -4812,6 +4836,17 @@ packages:
     dependencies:
       execa: 8.0.1
       ufo: 1.3.0
+    dev: true
+
+  /nypm@0.3.4:
+    resolution: {integrity: sha512-1JLkp/zHBrkS3pZ692IqOaIKSYHmQXgqfELk6YTOfVBnwealAmPA1q2kKK7PHJAHSMBozerThEFZXP3G6o7Ukg==}
+    engines: {node: ^14.16.0 || >=16.10.0}
+    hasBin: true
+    dependencies:
+      citty: 0.1.5
+      execa: 8.0.1
+      pathe: 1.1.1
+      ufo: 1.3.2
     dev: true
 
   /object-assign@4.1.1:
@@ -6035,6 +6070,18 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /tar@6.2.0:
+    resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      chownr: 2.0.0
+      fs-minipass: 2.1.0
+      minipass: 5.0.0
+      minizlib: 2.1.2
+      mkdirp: 1.0.4
+      yallist: 4.0.0
+    dev: true
+
   /terser@5.19.3:
     resolution: {integrity: sha512-pQzJ9UJzM0IgmT4FAtYI6+VqFf0lj/to58AV0Xfgg0Up37RyPG7Al+1cepC6/BVuAxR9oNb41/DL4DEoHJvTdg==}
     engines: {node: '>=10'}
@@ -6132,6 +6179,10 @@ packages:
 
   /ufo@1.3.0:
     resolution: {integrity: sha512-bRn3CsoojyNStCZe0BG0Mt4Nr/4KF+rhFlnNXybgqt5pXHNFRlqinSoQaTrGyzE4X8aHplSb+TorH+COin9Yxw==}
+    dev: true
+
+  /ufo@1.3.2:
+    resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
     dev: true
 
   /ultrahtml@1.4.0:
