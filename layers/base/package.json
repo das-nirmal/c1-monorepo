@@ -13,5 +13,8 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
     "nuxt": "^3.7.0"
+  },
+  "dependencies": {
+    "defu": "^6.1.3"
   }
 }

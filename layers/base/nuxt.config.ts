@@ -1,4 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import runtimeConfig from './configs/runtime/';
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
@@ -15,5 +18,6 @@ export default defineNuxtConfig({
         }
       }
     }]
-  ]
+  ],
+  runtimeConfig,
 });
