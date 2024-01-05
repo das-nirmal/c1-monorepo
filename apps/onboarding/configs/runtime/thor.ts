@@ -2,7 +2,9 @@ export default {
   _app: {
     session: {
       ttl: 3600
-    }
+    },
+
+    context: 'onboarding thor'
   },
 
   onboarding: {

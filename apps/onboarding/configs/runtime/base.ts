@@ -14,7 +14,9 @@ export default {
     externalData: {
       bucketName: 'dls-asgard-thor-externaldata'
     },
-    exemptCSRFendpointList: ['/apigateway/beacon/external-data']
+    exemptCSRFendpointList: ['/apigateway/beacon/external-data'],
+
+    context: 'onboarding base'
   },
 
   //onboarding config

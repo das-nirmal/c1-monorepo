@@ -1,15 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { loadConfig } from 'c12';
-import { join } from "node:path";
+import baseRuntimeConfig from './configs/runtime/base';
+import localRuntimeConfig from './configs/runtime/local';
+import thorRuntimeConfig from './configs/runtime/thor';
+import qaRuntimeConfig from './configs/runtime/qa';
+import prodRuntimeConfig from './configs/runtime/prod1';
 
-// const rtConfig = await loadConfig({
-//   cwd: join(process.cwd(), '/configs/runtime.config'),
-//   envName: process.env.APP_ENVIRONMENT
-// });
+console.log(process.env.NODE_ENV)
 
-export default defineNuxtConfig(async()=> {
-  return {
+console.log(process.env.APP_ENVIRONMENT)
+
+export default defineNuxtConfig({
     devtools: { enabled: true },
     extends: ["../../layers/base"],
     devServer: {
@@ -17,10 +18,24 @@ export default defineNuxtConfig(async()=> {
     },
 
     runtimeConfig: {
-      ...(await loadConfig({
-          cwd: join(process.cwd(), '/configs/runtime.config'),
-          envName: process.env.APP_ENVIRONMENT
-        }))
+      ...baseRuntimeConfig
     },
-  };
+
+    envName: process.env.APP_ENVIRONMENT,
+
+    $env: {
+      //local: { runtimeConfig: localRuntimeConfig },
+      development: { runtimeConfig: qaRuntimeConfig },
+      // thor: { runtimeConfig: thorRuntimeConfig },
+      qa: { runtimeConfig: qaRuntimeConfig },
+      production: { runtimeConfig: prodRuntimeConfig },
+    },
+
+    nitro: {
+      envName: process.env.APP_ENVIRONMENT,
+      c12: {
+        envName: process.env.APP_ENVIRONMENT,
+      }
+    }
+    
 });

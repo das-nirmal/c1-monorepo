@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import runtimeConfig from './configs/runtime.config/base';
-import publicRuntimeConfig from './configs/public.config/base';
+import runtimeConfig from './configs/runtime/base';
+import publicRuntimeConfig from './configs/runtime/public/base';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -23,10 +23,5 @@ export default defineNuxtConfig({
   runtimeConfig: {
     ...runtimeConfig,
     public: publicRuntimeConfig
-
-    // apiSecret: 'xyz',
-    // public: {
-    //   apiUrl: 'https://abc.com'
-    // }
   }
 });

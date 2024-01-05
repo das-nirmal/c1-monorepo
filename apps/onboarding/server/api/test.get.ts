@@ -7,5 +7,5 @@ export default defineEventHandler(() => {
   //console.log(JSON.stringify(runtimeConfig, null, 4))
   //return runtimeConfig.onboarding.contactSupport.emailAddress;
 
-  return 'up'
+  return runtimeConfig._app.context;
 })

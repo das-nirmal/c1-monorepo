@@ -38,9 +38,6 @@ importers:
       '@nuxtjs/google-fonts':
         specifier: ^3.0.2
         version: 3.0.2
-      c12:
-        specifier: ^1.6.1
-        version: 1.6.1
       nuxt:
         specifier: ^3.7.0
         version: 3.7.0

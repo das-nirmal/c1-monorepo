@@ -19,7 +19,9 @@ export default {
           region : process.env.AWS_REGION || 'us-west-2'
         }
       }
-    }
+    },
+
+    context: 'onboarding local'
   },
 
   onboarding: {
