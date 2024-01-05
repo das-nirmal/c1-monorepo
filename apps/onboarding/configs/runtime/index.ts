@@ -1,16 +1,40 @@
-import { loadConfig } from 'c12';
-import { join } from "node:path";
+import defu from 'defu';
 
-export default function returnConfig(): Promise<any> {
+import baseConfig from './base';
+import localConfig from "./local";
+import thorConfig from "./thor";
+import qaConfig from "./qa";
+import prod1Config from "./prod1";
 
-  console.log('returnConfig called');
-  
-  return new Promise(async (resolve) => {
-    const config = await loadConfig({
-      cwd: join(process.cwd(), '/configs/runtime.config'),
-      envName: process.env.APP_ENVIRONMENT
-    });
+import basePublicConfig from './public/base';
+import localPublicConfig from './public/local';
+import thorPublicConfig from './public/thor';
+import qaPublicConfig from './public/qa';
+import prodPublicConfig from './public/prod1';
 
-    resolve(config)
-  })
+const getEnvironmentConfig = () => {
+    const environment = process.env.APP_ENVIRONMENT || 'local';
+
+    let publicEnvConfig;
+    const publicConfigMap = {
+      prod1: prodPublicConfig,
+      qa: qaPublicConfig,
+      thor: thorPublicConfig,
+      local: localPublicConfig
+    };
+    publicEnvConfig = defu(publicConfigMap[environment], basePublicConfig);
+    
+    let envConfig;
+    const configMap = {
+      prod1: prod1Config,
+      qa: qaConfig,
+      thor: thorConfig,
+      local: localConfig
+    };
+    envConfig = configMap[environment];
+    envConfig.public = publicEnvConfig;
+    
+    return defu(envConfig, baseConfig);
 }
+
+export default getEnvironmentConfig();

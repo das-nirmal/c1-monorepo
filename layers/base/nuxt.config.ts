@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import runtimeConfig from './configs/runtime/base';
-import publicRuntimeConfig from './configs/runtime/public/base';
+import runtimeConfig from './configs/runtime/';
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -20,8 +19,5 @@ export default defineNuxtConfig({
       }
     }]
   ],
-  runtimeConfig: {
-    ...runtimeConfig,
-    public: publicRuntimeConfig
-  }
+  runtimeConfig,
 });
