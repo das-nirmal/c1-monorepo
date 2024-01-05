@@ -3,10 +3,10 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "set NODE_ENV=qa && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "set NODE_ENV=qa && nuxt preview",
+    "preview": "set PORT=3000 && nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
