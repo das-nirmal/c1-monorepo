@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
+  "main": "./nuxt.config.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm"
   },
