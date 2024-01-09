@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.0"
+    "nuxt": "^3.7.0",
+    "base": "workspace:*"
   },
   "dependencies": {
     "test-package": "workspace:*"

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: [
-    '../../layers/base'
+    'base'
   ],
   devServer: {
     port: 3001
