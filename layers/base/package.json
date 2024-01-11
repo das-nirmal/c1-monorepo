@@ -13,6 +13,8 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
-    "nuxt": "^3.7.0"
+    "nuxt": "^3.7.0",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1"
   }
 }
