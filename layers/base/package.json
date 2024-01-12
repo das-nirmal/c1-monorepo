@@ -13,6 +13,10 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
+    "@types/newrelic": "^9.14.3",
     "nuxt": "^3.7.0"
+  },
+  "dependencies": {
+    "newrelic": "^11.9.0"
   }
 }

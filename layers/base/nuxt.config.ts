@@ -1,3 +1,9 @@
+
+console.log('NEWRELIC in nuxt.config.ts');
+
+import newrelic from 'newrelic';
+console.log(newrelic.agent.config.app_name);
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -14,6 +20,7 @@ export default defineNuxtConfig({
           ital: [300, 600]
         }
       }
-    }]
+    }],
+    //'./modules/newrelic',
   ]
 });
