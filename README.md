@@ -1,4 +1,4 @@
-# 🔴Moved to https://github.com/comprodls/ref-monorepo❗
+# 🔴Moved to https://github.com/comprodls/ref-monorepo
 
 # C1 Monorepo
 
