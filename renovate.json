@@ -1,6 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ]
+  "extends": ["github>nuxt/renovate-config-nuxt"],
+  "baseBranches": ["dashboard/master"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "autoApprove": true,
+      "automerge": true
+    }
+  ],
+  "ignoreDeps": ["comprodls-sdk", "vue-tsc"]
 }
