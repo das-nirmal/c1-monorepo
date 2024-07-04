@@ -9,5 +9,6 @@
       "automerge": true
     }
   ],
-  "ignoreDeps": ["comprodls-sdk", "vue-tsc"]
+  "ignoreDeps": ["comprodls-sdk", "vue-tsc"],
+  "enabled": false
 }
